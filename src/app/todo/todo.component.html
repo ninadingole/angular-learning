@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>Todo</h2>
+  </div>
+  <app-todo-input></app-todo-input>
+  <div class="todo-list">
+    <div class="row list-group mt-1" *ngFor="let todo of todos; index as todoId">
+      <app-todo-item [todo]="todo"
+                     [index]="todoId"
+                     (todoEvent)="toggleTodo(todoId)"
+                     (deleteEvent)="deleteTodo(todoId)"
+                     class="col-md-12"></app-todo-item>
+    </div>
+  </div>
+</div>

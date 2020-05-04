@@ -1,0 +1,11 @@
+<div class="list-group-item">
+  <div class="row">
+    <div class="col-md-11" (click)="toggleTodo()">
+      <input type="checkbox" class="form-check-input" [checked]="todo.completed" disabled/>
+      <span class="ml-2 todo-item" [ngClass]="['ml-2', todo.completed ? 'completed' : '']">{{todo.title}}</span>
+    </div>
+    <div class="col-md-1" class="delete-todo" (click)="deleteEvent.emit();">
+      <span>X</span>
+    </div>
+  </div>
+</div>

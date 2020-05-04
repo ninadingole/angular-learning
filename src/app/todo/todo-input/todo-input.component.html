@@ -1,0 +1,14 @@
+<div class="row  mb-2 clearfix">
+  <div class="form-row">
+    <div class="form-inline">
+      <div class="col-10">
+        <input type="text" class="form-control" id="todoInput" #todoInput/>
+      </div>
+      <div class="col-2">
+        <button type="submit" class="form-control btn btn-primary ml-2"
+                (click)="addTodo(todoInput.value)">Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
